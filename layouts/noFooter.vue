@@ -1,17 +1,9 @@
 <template>
-  <ElContainer h-100vh>
-    <ElHeader
-      :style="{
-        height: 'var(--base-header-height)',
-      }"
-      ><TheNav
-    /></ElHeader>
-    <ElContainer>
-      <slot name="main">
-        <ElMain>
-          <slot></slot>
-        </ElMain>
-      </slot>
-    </ElContainer>
-  </ElContainer>
+  <Default :footer="false">
+    <slot></slot>
+  </Default>
 </template>
+
+<script setup lang="ts">
+import Default from "~/layouts/default.vue";
+</script>

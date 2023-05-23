@@ -1,17 +1,9 @@
 <template>
-  <ElContainer h-100vh>
-    <ElContainer>
-      <slot name="main">
-        <ElMain>
-          <slot></slot>
-        </ElMain>
-      </slot>
-    </ElContainer>
-    <ElFooter
-      :style="{
-        height: 'var(--base-footer-height)',
-      }"
-      ><TheFooter
-    /></ElFooter>
-  </ElContainer>
+  <Default :header="false">
+    <slot></slot>
+  </Default>
 </template>
+
+<script setup lang="ts">
+import Default from "~/layouts/default.vue";
+</script>

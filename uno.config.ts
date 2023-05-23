@@ -15,6 +15,10 @@ export default defineConfig({
       "icon-btn",
       "text-[0.9em] inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600 !outline-none",
     ],
+    [
+      "position-center",
+      "position-absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+    ],
   ],
   presets: [
     presetUno(),

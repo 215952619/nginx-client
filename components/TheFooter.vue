@@ -16,7 +16,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span i-mdi-github></span>
+        <el-icon><span i-mdi-github></span></el-icon>
       </a>
     </p>
   </footer>

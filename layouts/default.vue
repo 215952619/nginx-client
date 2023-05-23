@@ -1,23 +1,42 @@
 <template>
   <ElContainer h-100vh>
     <ElHeader
+      v-if="header"
       :style="{
         height: 'var(--base-header-height)',
       }"
-      ><TheNav
-    /></ElHeader>
-    <ElContainer>
-      <slot name="main">
-        <ElMain>
-          <slot></slot>
-        </ElMain>
+    >
+      <slot name="header">
+        <TheNav />
       </slot>
-    </ElContainer>
+    </ElHeader>
+
+    <ElMain position-relative>
+      <slot></slot>
+    </ElMain>
+
     <ElFooter
+      v-if="footer"
       :style="{
         height: 'var(--base-footer-height)',
       }"
-      ><TheFooter
-    /></ElFooter>
+    >
+      <slot name="footer">
+        <TheFooter />
+      </slot>
+    </ElFooter>
   </ElContainer>
 </template>
+
+<script setup lang="ts">
+defineProps({
+  header: {
+    type: Boolean,
+    default: true,
+  },
+  footer: {
+    type: Boolean,
+    default: true,
+  },
+});
+</script>
